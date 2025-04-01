@@ -1,0 +1,623 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "eCnfup1VrU47"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Python Basics Questions & Answers"
+      ],
+      "metadata": {
+        "id": "mMkbQctXrWhO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. What is Python, and why is it popular?\n",
+        " - Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility. It is popular due to its easy syntax, extensive libraries, strong community support, and wide applications in data science, web development, automation, AI, and more.\n",
+        "\n",
+        " 2.What is an interpreter in Python?\n",
+        "  - An interpreter in Python is a program that executes code line by line, converting it into machine-readable instructions. It allows for easy debugging and rapid development without needing compilation.\n",
+        "\n",
+        "  3.What are pre-defined keywords in Python?\n",
+        "   - Pre-defined keywords in Python are reserved words with special meanings that cannot be used as identifiers. Examples include `if`, `else`, `while`, `for`, `def`, `class`, `import`, `return`, and `True`. They define the syntax and structure of Python code.\n",
+        "\n",
+        "   4.Can keywords be used as variable names?\n",
+        "    - No, keywords cannot be used as variable names in Python because they are reserved for specific syntax and functions in the language.\n",
+        "\n",
+        "    5.What is mutability in Python?\n",
+        "     - Mutability in Python refers to whether an object's value can be changed after creation. **Mutable** objects (e.g., lists, dictionaries, sets) can be modified, while **immutable** objects (e.g., strings, tuples, integers) cannot.\n",
+        "     \n",
+        "     6.Why are lists mutable, but tuples are immutable?\n",
+        "      - Lists are mutable because they allow modifications like adding, removing, or changing elements. Tuples are immutable to ensure data integrity and improve performance by preventing modifications after creation.\n",
+        "\n",
+        "      7.What is the difference between “==” and “is” operators in Python?\n",
+        "      - `==` checks if two values are **equal**, while `is` checks if two objects have the **same memory address** (identity). Example:  \n",
+        "\n",
+        "      ```python\n",
+        "      a = [1, 2, 3]  \n",
+        "      b = [1, 2, 3]  \n",
+        "      print(a == b)  # True (values are equal)  \n",
+        "      print(a is b)  # False (different memory locations)  \n",
+        "      ```\n",
+        "      8.What are logical operators in Python?\n",
+        "       - Logical operators in Python are used to combine conditional statements. They include:  \n",
+        "\n",
+        "       - `and` → Returns `True` if both conditions are true.  \n",
+        "       - `or` → Returns `True` if at least one condition is true.  \n",
+        "       - `not` → Reverses the truth value of a condition.  \n",
+        "\n",
+        "       Example:  \n",
+        "       ```python\n",
+        "       x = 5\n",
+        "       y = 10\n",
+        "       print(x > 3 and y > 5)  # True\n",
+        "       print(x > 10 or y > 5)  # True\n",
+        "       print(not (x > 3))      # False\n",
+        "       ```\n",
+        "       8.What is type casting in Python?\n",
+        "        - Type casting in Python is converting a variable from one data type to another. It can be **implicit** (automatic) or **explicit** (manual using functions like `int()`, `float()`, `str()`, `list()`).  \n",
+        "\n",
+        "        Example:  \n",
+        "        ```python\n",
+        "        x = \"10\"\n",
+        "        y = int(x)  # Explicit casting from string to integer\n",
+        "        print(y + 5)  # Output: 15\n",
+        "        ```\n",
+        "        10.What is the difference between implicit and explicit type casting?\n",
+        "         -  **Implicit Type Casting:** Done automatically by Python when converting a smaller data type to a larger one.  \n",
+        "         **Explicit Type Casting:** Done manually using functions like `int()`, `float()`, `str()`, etc.  \n",
+        "\n",
+        "         Example:  \n",
+        "         ```python\n",
+        "         # Implicit\n",
+        "         a = 5  \n",
+        "         b = 2.5  \n",
+        "         c = a + b  # Automatically converts `a` to float\n",
+        "         print(c, type(c))  # Output: 7.5 <class 'float'>\n",
+        "\n",
+        "         # Explicit\n",
+        "         x = \"10\"\n",
+        "         y = int(x)  # Manually converting string to integer\n",
+        "         print(y, type(y))  # Output: 10 <class 'int'>\n",
+        "         ```\n",
+        "         11.What is the purpose of conditional statements in Python?\n",
+        "          - Conditional statements in Python, such as `if`, `elif`, and `else`, are used to execute specific blocks of code based on certain conditions. They enable decision-making in the program by checking whether a condition is true or false.\n",
+        "\n",
+        "          12.How does the elif statement work?\n",
+        "          - The `elif` (else if) statement in Python allows you to check multiple conditions after an `if` statement. If the `if` condition is false, it evaluates the `elif` condition. You can have multiple `elif` statements to check different conditions before the `else` block is executed.\n",
+        "\n",
+        "          Example:\n",
+        "          ```python\n",
+        "          x = 10\n",
+        "          if x > 15:\n",
+        "              print(\"Greater than 15\")\n",
+        "              elif x > 5:\n",
+        "                  print(\"Greater than 5 but less than or equal to 15\")  # This will execute\n",
+        "                  else:\n",
+        "                      print(\"5 or less\")\n",
+        "                      ```\n",
+        "            13.What is the difference between for and while loops?\n",
+        "            - The **`for` loop** is used to iterate over a sequence (like a list, tuple, or range), executing a block of code a specific number of times.  \n",
+        "\n",
+        "            The **`while` loop** repeatedly executes a block of code as long as a condition is `True`.  \n",
+        "\n",
+        "            **Example:**\n",
+        "            ```python\n",
+        "            # For loop\n",
+        "            for i in range(5):\n",
+        "                print(i)  # Executes 5 times\n",
+        "\n",
+        "                # While loop\n",
+        "                i = 0\n",
+        "                while i < 5:\n",
+        "                    print(i)  # Executes 5 times\n",
+        "                        i += 1\n",
+        "                        ```\n",
+        "          14.Describe a scenario where a while loop is more suitable than a for loop.\n",
+        "          - A while loop is more suitable when the number of iterations is not known in advance and depends on a condition that may change during execution.\n",
+        "\n",
+        "          **Example:**  \n",
+        "          You want to keep prompting a user for input until they enter a valid response:\n",
+        "          ```python\n",
+        "          user_input = \"\"\n",
+        "          while user_input != \"yes\" and user_input != \"no\":\n",
+        "              user_input = input(\"Enter 'yes' or 'no': \")\n",
+        "              ```  \n",
+        "              In this case, the loop runs until the user provides a valid answer, and the number of iterations is uncertain.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "4Pb4vFdPrdQT"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Practical Questions & Answer"
+      ],
+      "metadata": {
+        "id": "X3NHbBzpySkx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 1.Write a Python program to print \"Hello, World!_\"\n",
+        "print(\"Hello,world\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LpSMm-Xmyp6A",
+        "outputId": "b61b988d-46fd-442f-c981-44d68d58a61c"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello,world\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 2.Write a Python program that displays your name and age.\n",
+        "# Define name and age\n",
+        "name = \"John Doe\"\n",
+        "age = 25\n",
+        "\n",
+        "# Display name and age\n",
+        "print(\"Name:\", name)\n",
+        "print(\"Age:\", age)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tmpOwqQYzHoH",
+        "outputId": "444af9b7-7478-45ea-9399-d50259a350f8"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Name: John Doe\n",
+            "Age: 25\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "SMdTd_bs0tsU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 3.Write code to print all the pre-defined keywords in Python using the keyword library.\n",
+        "#You can use the `keyword` library in Python to print all the pre-defined keywords. Here's the code:\n",
+        "\n",
+        "#```python...\n",
+        "import keyword\n",
+        "\n",
+        "# Print all the pre-defined keywords in Python\n",
+        "print(keyword.kwlist)\n",
+        "\n",
+        "\n",
+        "# This will display the list of all the keywords in Python."
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h4qmkVeVzb2e",
+        "outputId": "9258b322-ba9e-4458-af02-493da2622f00"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 4.Write a program that checks if a given word is a Python keyword.\n",
+        "#Here’s a Python program that checks if a given word is a Python keyword:\n",
+        "\n",
+        "import keyword\n",
+        "\n",
+        "# Input word from the user\n",
+        "word = input(\"Enter a word to check if it's a Python keyword: \")\n",
+        "\n",
+        "# Check if the word is a Python keyword\n",
+        "if keyword.iskeyword(word):\n",
+        "    print(f\"'{word}' is a Python keyword.\")\n",
+        "else:\n",
+        "        print(f\"'{word}' is not a Python keyword.\")\n",
+        "\n",
+        "\n",
+        "        #This program uses the `keyword.iskeyword()` function to check if the entered word is a Python keyword."
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e8ccrk7M07BU",
+        "outputId": "becdcf0f-2103-495b-990b-12634cd87dbd"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a word to check if it's a Python keyword: Function\n",
+            "'Function' is not a Python keyword.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 5.Create a list and tuple in Python, and demonstrate how attempting to change an element works differently for each.\n",
+        "# Create a list and a tuple\n",
+        "my_list = [1, 2, 3, 4]\n",
+        "my_tuple = (1, 2, 3, 4)\n",
+        "\n",
+        "# Try changing an element in the list\n",
+        "my_list[0] = 10\n",
+        "print(\"List after modification:\", my_list)\n",
+        "\n",
+        "# Try changing an element in the tuple (will raise an error)\n",
+        "try:\n",
+        "    my_tuple[0] = 10\n",
+        "except TypeError as e:\n",
+        "        print(\"Error when modifying tuple:\", e)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dBwHyZhD1kiu",
+        "outputId": "1e24d217-e8bd-4c83-cc2d-286d429ec023"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "List after modification: [10, 2, 3, 4]\n",
+            "Error when modifying tuple: 'tuple' object does not support item assignment\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 6.Write a function to demonstrate the behavior of mutable and immutable arguments.\n",
+        "def modify_arguments(immutable_arg, mutable_arg):\n",
+        "      # Trying to modify the immutable argument (does not change)\n",
+        "          immutable_arg = 100\n",
+        "          print(\"Inside function, immutable_arg (after modification):\", immutable_arg)\n",
+        "\n",
+        "          # Modifying the mutable argument (changes the original object)\n",
+        "          mutable_arg.append(4)\n",
+        "          print(\"Inside function, mutable_arg (after modification):\", mutable_arg)\n",
+        "\n",
+        "                              # Test the function\n",
+        "                              immutable_var = 10\n",
+        "                              mutable_var = [1, 2, 3]\n",
+        "\n",
+        "                              print(\"Before function call:\")\n",
+        "                              print(\"immutable_var:\", immutable_var)\n",
+        "                              print(\"mutable_var:\", mutable_var)\n",
+        "\n",
+        "                              modify_arguments(immutable_var, mutable_var)\n",
+        "\n",
+        "                              print(\"After function call:\")\n",
+        "                              print(\"immutable_var:\", immutable_var)\n",
+        "                              print(\"mutable_var:\", mutable_var)\n"
+      ],
+      "metadata": {
+        "id": "HpLCbC9c2Pbk"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 7.Write a function to demonstrate the behavior of mutable and immutable arguments.\n",
+        " def modify_arguments(immutable_arg, mutable_arg):\n",
+        "      # Trying to modify the immutable argument\n",
+        "          immutable_arg = 100\n",
+        "          print(\"Inside function, immutable_arg (after modification):\", immutable_arg)\n",
+        "\n",
+        "                      # Modifying the mutable argument\n",
+        "                              mutable_arg.append(4)\n",
+        "                              print(\"Inside function, mutable_arg (after modification):\", mutable_arg)\n",
+        "\n",
+        "                              # Test the function\n",
+        "                              immutable_var = 10\n",
+        "                              mutable_var = [1, 2, 3]\n",
+        "\n",
+        "                              print(\"Before function call:\")\n",
+        "                              print(\"immutable_var:\", immutable_var)\n",
+        "                              print(\"mutable_var:\", mutable_var)\n",
+        "\n",
+        "                              modify_arguments(immutable_var, mutable_var)\n",
+        "\n",
+        "                              print(\"After function call:\")\n",
+        "                              print(\"immutable_var:\", immutable_var)\n",
+        "                              print(\"mutable_var:\", mutable_var)\n"
+      ],
+      "metadata": {
+        "id": "oVf4s0Lm4Q7F"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 8.Write a program to demonstrate the use of logical operators.\n",
+        "# Input values\n",
+        "\n",
+        "# Input values\n",
+        "x = 5\n",
+        "y = 10\n",
+        "z = 15\n",
+        "\n",
+        "# Using 'and' operator\n",
+        "if x < y and y < z:\n",
+        "    print(\"x is less than y and y is less than z\")\n",
+        "\n",
+        "    # Using 'or' operator\n",
+        "    if x < y or y > z:\n",
+        "        print(\"Either x is less than y or y is greater than z\")\n",
+        "\n",
+        "        # Using 'not' operator\n",
+        "        if not (x > y):\n",
+        "            print(\"x is not greater than y\")\n",
+        "\n",
+        "            # Combining all logical operators\n",
+        "            if x < y and (y < z or z == 15):\n",
+        "                print(\"x is less than y, and either y is less than z or z is 15\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "MH_EfMd245V2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 9. Write a Python program to convert user input from string to integer, float, and boolean types.\n",
+        "# Take user input as a string\n",
+        "user_input = input(\"Enter a value: \")\n",
+        "\n",
+        "# Convert the input to an integer, float, and boolean\n",
+        "try:\n",
+        "    int_value = int(user_input)\n",
+        "        print(f\"Converted to integer: {int_value}\")\n",
+        "        except ValueError:\n",
+        "            print(\"Cannot convert to integer.\")\n",
+        "\n",
+        "            try:\n",
+        "                float_value = float(user_input)\n",
+        "                    print(f\"Converted to float: {float_value}\")\n",
+        "                    except ValueError:\n",
+        "                        print(\"Cannot convert to float.\")\n",
+        "\n",
+        "                        # Convert to boolean (Empty string is False, otherwise True)\n",
+        "                        bool_value = bool(user_input)\n",
+        "                        print(f\"Converted to boolean: {bool_value}\")\n",
+        ""
+      ],
+      "metadata": {
+        "id": "QcZzK1oZ5dBi"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#10. Write code to demonstrate type casting with list elements.\n",
+        "# List with mixed data types\n",
+        "mixed_list = [\"10\", \"20\", \"30\", 40.5, 50]\n",
+        "\n",
+        "# Type casting the elements in the list\n",
+        "# Convert string elements to integers\n",
+        "int_list = [int(item) if isinstance(item, str) else item for item in mixed_list]\n",
+        "\n",
+        "# Convert float elements to integers\n",
+        "int_list_from_float = [int(item) if isinstance(item, float) else item for item in mixed_list]\n",
+        "\n",
+        "# Convert all elements to strings\n",
+        "str_list = [str(item) for item in mixed_list]\n",
+        "\n",
+        "# Display the results\n",
+        "print(\"Original List:\", mixed_list)\n",
+        "print(\"List after converting strings to integers:\", int_list)\n",
+        "print(\"List after converting float elements to integers:\", int_list_from_float)\n",
+        "print(\"List after converting all elements to strings:\", str_list)\n"
+      ],
+      "metadata": {
+        "id": "vQ8A3QUe5uYk"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 11.Write a program that checks if a number is positive, negative, or zero.\n",
+        "# Take user input\n",
+        "num = float(input(\"Enter a number: \"))\n",
+        "\n",
+        "# Check if the number is positive, negative, or zero\n",
+        "if num > 0:\n",
+        "    print(\"The number is positive.\")\n",
+        "    elif num < 0:\n",
+        "        print(\"The number is negative.\")\n",
+        "        else:\n",
+        "            print(\"The number is zero.\")\n",
+        ""
+      ],
+      "metadata": {
+        "id": "yQi0lmQM6Eda"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 12.Write a for loop to print numbers from 1 to 10.\n",
+        "# Using a for loop to print numbers from 1 to 10\n",
+        "                  for num in range(1, 11):\n",
+        "                    print(num)\n"
+      ],
+      "metadata": {
+        "id": "nnhgX1Ch6Rop"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 13.Write a Python program to find the sum of all even numbers between 1 and 50.\n",
+        "# Initialize sum to 0\n",
+        "sum_even = 0\n",
+        "\n",
+        "# Loop through numbers from 1 to 50\n",
+        "for num in range(1, 51):\n",
+        "    if num % 2 == 0:  # Check if the number is even\n",
+        "            sum_even += num\n",
+        "\n",
+        "            # Print the result\n",
+        "            print(\"Sum of all even numbers between 1 and 50:\", sum_even)\n",
+        ""
+      ],
+      "metadata": {
+        "id": "1h6BK1qP61BM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 14.Write a program to reverse a string using a while loop.\n",
+        "# Input string from the user\n",
+        "input_string = input(\"Enter a string: \")\n",
+        "\n",
+        "# Initialize an empty string to store the reversed string\n",
+        "reversed_string = \"\"\n",
+        "\n",
+        "# Initialize a counter to iterate over the string in reverse order\n",
+        "index = len(input_string) - 1\n",
+        "\n",
+        "# Use a while loop to reverse the string\n",
+        "while index >= 0:\n",
+        "    reversed_string += input_string[index]\n",
+        "        index -= 1\n",
+        "\n",
+        "        # Print the reversed string\n",
+        "        print(\"Reversed string:\", reversed_string)\n",
+        ""
+      ],
+      "metadata": {
+        "id": "6OFFrqYM7E6A"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 15. Write a Python program to calculate the factorial of a number provided by the user using a while loop.\n",
+        "# Take input from the user\n",
+        "num = int(input(\"Enter a number to calculate its factorial: \"))\n",
+        "\n",
+        "# Initialize variables\n",
+        "factorial = 1\n",
+        "i = 1\n",
+        "\n",
+        "# Check if the number is negative\n",
+        "if num < 0:\n",
+        "    print(\"Factorial does not exist for negative numbers.\")\n",
+        "else:\n",
+        "        # Use a while loop to calculate the factorial\n",
+        "            while i <= num:\n",
+        "                    factorial *= i\n",
+        "                    i += 1\n",
+        "\n",
+        "            # Print the result\n",
+        "            print(f\"The factorial of {num} is {factorial}.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f0GLjhdz7ZG_",
+        "outputId": "b3f36680-718b-4535-9ccd-161741621a13"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number to calculate its factorial: 6\n",
+            "The factorial of 6 is 720.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
